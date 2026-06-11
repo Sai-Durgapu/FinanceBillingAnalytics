@@ -1,68 +1,115 @@
-# 📂 Complete Finance Billing Analytics Project Structure
+# 💰 Finance Billing Analytics Platform
 
-text
-Finance Billing Analytics Platform
-📌 Project Overview
+## 📌 Project Overview
 
-Finance Billing Analytics Platform is a web-based financial management system developed using ASP.NET Core 8, Entity Framework Core, SQL Server, MVC, Web API, and Clean Architecture principles.
+Finance Billing Analytics Platform is a web-based financial management system developed using **ASP.NET Core 8**, **Entity Framework Core**, **SQL Server**, **MVC**, **Web API**, and **Clean Architecture** principles.
 
-The platform helps organizations efficiently manage customers, invoices, payments, and financial analytics through a secure and scalable architecture.
+The platform helps organizations efficiently manage customers, invoices, payments, and financial analytics through a secure, scalable, and maintainable architecture.
 
-🎯 Objectives
+---
+
+# 🎯 Objectives
 
 The primary objectives of this platform are:
 
-Customer Management
-Invoice Management
-Payment Management
-Dashboard Analytics
-Financial Reporting
-Secure Authentication & Authorization
-🛠 Technologies Used
-Technology	Purpose
-ASP.NET Core 8	Backend Framework
-C#	Programming Language
-SQL Server	Database
-Entity Framework Core	ORM
-MVC	User Interface
-Web API	RESTful Services
-AutoMapper	Object Mapping
-FluentValidation	Input Validation
-JWT Authentication	Security
-Swagger	API Documentation
-Bootstrap	Frontend UI Design
-🏗 Architecture
+* Customer Management
+* Invoice Management
+* Payment Management
+* Dashboard Analytics
+* Financial Reporting
+* Secure Authentication & Authorization
 
-The application follows Clean Architecture principles to ensure maintainability, scalability, and separation of concerns.
+---
 
+# 🚀 Key Features
+
+### Customer Management
+
+* Create Customer
+* Update Customer
+* Delete Customer
+* View Customer Details
+* Search Customers
+
+### Invoice Management
+
+* Create Invoices
+* Update Invoices
+* Delete Invoices
+* Invoice Status Tracking
+* Customer-wise Invoice History
+
+### Payment Management
+
+* Record Payments
+* Track Payment History
+* Outstanding Balance Calculation
+* Invoice Payment Tracking
+
+### Dashboard Analytics
+
+* Total Customers
+* Total Invoices
+* Total Revenue
+* Total Payments
+* Pending Invoices
+* Monthly Revenue Reports
+
+### Security
+
+* JWT Authentication
+* Role-Based Authorization
+* Secure API Endpoints
+* Global Exception Handling
+
+---
+
+# 🛠 Technologies Used
+
+| Technology            | Purpose              |
+| --------------------- | -------------------- |
+| ASP.NET Core 8        | Backend Framework    |
+| C#                    | Programming Language |
+| SQL Server            | Database             |
+| Entity Framework Core | ORM                  |
+| MVC                   | User Interface Layer |
+| Web API               | RESTful Services     |
+| AutoMapper            | Object Mapping       |
+| FluentValidation      | Request Validation   |
+| JWT Authentication    | Security             |
+| Swagger               | API Documentation    |
+| Bootstrap             | Responsive UI        |
+
+---
+
+# 🏗 Architecture
+
+The application follows **Clean Architecture** principles.
+
+```text
 User
-  │
-  ▼
+ │
+ ▼
 MVC Web Application
-  │
-  ▼
+ │
+ ▼
 Web API
-  │
-  ▼
+ │
+ ▼
 Application Layer
-  │
-  ▼
+ │
+ ▼
 Infrastructure Layer
-  │
-  ▼
+ │
+ ▼
 SQL Server Database
-📂 Complete Solution Structure
-FinanceBillingAnalytics
-│
-├── 📁 FinanceBilling.Domain
-│
-├── 📁 FinanceBilling.Application
-│
-├── 📁 FinanceBilling.Infrastructure
-│
-├── 📁 FinanceBilling.API
-│
-└── 📁 FinanceBilling.Web
+```
+
+---
+
+# 📂 Complete Project Structure
+
+```text
 FinanceBillingAnalytics
 │
 ├── 📁 FinanceBilling.Domain
@@ -199,8 +246,37 @@ FinanceBillingAnalytics
 │       └── 📁 images
 │
 └── 📄 FinanceBillingAnalytics.sln
+```
 
-🗄 Database Relationships
+---
+
+# 📋 Layer Responsibilities
+
+## FinanceBilling.Domain
+
+Contains core business entities, enums, exceptions, and shared base classes. This layer contains enterprise business rules and has no dependency on other layers.
+
+## FinanceBilling.Application
+
+Contains DTOs, interfaces, services, validators, and AutoMapper profiles. Responsible for implementing application business logic and use cases.
+
+## FinanceBilling.Infrastructure
+
+Contains Entity Framework Core DbContext, repositories, database configurations, identity management, JWT implementation, and dependency injection registrations.
+
+## FinanceBilling.API
+
+Provides RESTful APIs for authentication, customer management, invoice processing, payment management, and dashboard analytics.
+
+## FinanceBilling.Web
+
+Contains MVC controllers, Razor views, models, and frontend assets that interact with the API layer.
+
+---
+
+# 🗄 Database Relationships
+
+```text
 Customer
    │
    └── (1:N)
@@ -212,12 +288,20 @@ Customer
                │
                ▼
             Payment
-Relationship Explanation
-One Customer can have multiple Invoices.
-One Invoice can have multiple Payments.
-Each Invoice belongs to one Customer.
-Each Payment belongs to one Invoice.
-🔄 Project Flow
+```
+
+### Relationship Explanation
+
+* One Customer can have multiple Invoices.
+* One Invoice can have multiple Payments.
+* Each Invoice belongs to one Customer.
+* Each Payment belongs to one Invoice.
+
+---
+
+# 🔄 Project Flow
+
+```text
 User
  │
  ▼
@@ -243,73 +327,74 @@ SQL Server
  │
  ▼
 Response
-📊 Core Modules
-Customer Management
-Create Customer
-Update Customer
-Delete Customer
-View Customer Details
-Search Customers
-Invoice Management
-Create Invoice
-Update Invoice
-Delete Invoice
-Invoice Status Tracking
-Invoice History
-Payment Management
-Record Payments
-Payment Tracking
-Payment History
-Outstanding Balance Calculation
-Dashboard Analytics
-Total Customers
-Total Invoices
-Total Revenue
-Total Payments
-Monthly Revenue Trends
-Pending Invoice Reports
-🔐 Security Features
-JWT Authentication
-Role-Based Authorization
-Secure API Endpoints
-Password Hashing
-Global Exception Handling
-📖 API Documentation
+```
 
-Swagger is integrated for API testing and documentation.
+---
 
+# 🔐 Authentication & Authorization
+
+The platform uses JWT Authentication for securing APIs.
+
+### Features
+
+* User Registration
+* User Login
+* JWT Token Generation
+* Role-Based Authorization
+* Secure API Access
+* Authentication Middleware
+
+---
+
+# 📖 API Documentation
+
+Swagger is integrated for API testing and API documentation.
+
+```url
 https://localhost:5001/swagger
-🚀 Advantages of Clean Architecture
-Separation of Concerns
+```
+
+---
+
+# ✅ Advantages of Clean Architecture
+
+### Separation of Concerns
 
 Each layer has a dedicated responsibility.
 
-Maintainability
+### Maintainability
 
 Code is easier to update and maintain.
 
-Scalability
+### Scalability
 
-New features can be added with minimal impact.
+New features can be added with minimal impact on existing modules.
 
-Reusability
+### Reusability
 
-Business logic can be reused across applications.
+Business logic can be reused across multiple applications.
 
-Testability
+### Testability
 
 Supports unit testing and integration testing.
 
-📈 Future Enhancements
-Email Notifications
-PDF Invoice Generation
-Export Reports to Excel
-Multi-Tenant Support
-Audit Logging
-Advanced Dashboard Charts
-Payment Gateway Integration
-👨‍💻 Author
+---
 
-Finance Billing Analytics Platform
+# 📈 Future Enhancements
 
-Built using ASP.NET Core 8, Entity Framework Core, SQL Server, MVC, Web API, and Clean Architecture.
+* Email Notifications
+* PDF Invoice Generation
+* Export Reports to Excel
+* Advanced Dashboard Charts
+* Audit Logging
+* Multi-Tenant Architecture
+* Payment Gateway Integration
+* Real-Time Notifications
+
+---
+
+# 👨‍💻 Author
+
+**Finance Billing Analytics Platform**
+
+Built with ASP.NET Core 8, Entity Framework Core, SQL Server, MVC, Web API, JWT Authentication, and Clean Architecture principles.
