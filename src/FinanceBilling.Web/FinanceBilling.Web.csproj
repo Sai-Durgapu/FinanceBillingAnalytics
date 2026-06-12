@@ -6,4 +6,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinanceBilling.Application\FinanceBilling.Application.csproj" />
+    <ProjectReference Include="..\FinanceBilling.Domain\FinanceBilling.Domain.csproj" />
+    <ProjectReference Include="..\FinanceBilling.Infrastructure\FinanceBilling.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
